@@ -1,8 +1,10 @@
 import React from "react";
+import ReturnBtn from "../returnBtn";
 import {
   BuyBtn,
   CardContent,
   CardItem,
+  Container,
   ImageItem,
   TextValue,
   Title,
@@ -16,14 +18,17 @@ type Prop = {
 
 export const ShoeItem = ({ title, price, image }: Prop) => {
   return (
-    <CardItem>
-      <ImageItem src={image} alt="imagem" />
-      <CardContent>
-        <Title>{title}</Title>
+    <Container>
+      <CardItem>
+        <ImageItem src={image} alt="imagem" />
+        <CardContent>
+          <Title>{title}</Title>
 
-        <TextValue>{price}</TextValue>
-        <BuyBtn>Comprar</BuyBtn>
-      </CardContent>
-    </CardItem>
+          <TextValue>{price}</TextValue>
+          <BuyBtn>Comprar</BuyBtn>
+        </CardContent>
+      </CardItem>
+      <ReturnBtn />
+    </Container>
   );
 };

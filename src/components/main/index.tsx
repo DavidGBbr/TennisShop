@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { shoes } from "../../assets/utils/shoes";
-import { BtnNavigate } from "./styles";
+import { BtnNavigate, MainContainer } from "./styles";
 
 export const MainNavigate = () => {
   const navigate = useNavigate();
@@ -9,12 +9,12 @@ export const MainNavigate = () => {
     navigate(path);
   };
   return (
-    <>
+    <MainContainer>
       {shoes.map((item, index) => (
         <BtnNavigate key={index} onClick={() => handleNavigateBtn(item.path)}>
           {item.name}
         </BtnNavigate>
       ))}
-    </>
+    </MainContainer>
   );
 };

@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const CardItem = styled.div`
   width: 40%;
   background-color: #f7f7f7;
@@ -10,15 +17,14 @@ export const CardItem = styled.div`
   cursor: pointer;
   padding: 20px;
   margin: 50px auto;
-  transition: 0.5s;
-
-  &:hover {
-    transform: scale(1.04);
-  }
 
   @media (max-width: 900px) {
     flex-direction: row;
     width: calc(80% - 80px);
+  }
+
+  @media (max-width: 600px) {
+    width: calc(100% - 40px);
   }
 `;
 
@@ -34,6 +40,7 @@ export const CardContent = styled.div`
 
 export const Title = styled.h1`
   font-size: 22px;
+  line-height: 90%;
   margin: 0px;
 
   @media (max-width: 900px) {
@@ -41,7 +48,11 @@ export const Title = styled.h1`
   }
 
   @media (max-width: 600px) {
-    font-size: 20px;
+    font-size: 24px;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 18px;
   }
 `;
 
@@ -53,6 +64,10 @@ export const TextValue = styled.h2`
   max-width: 100%;
 
   @media (max-width: 600px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 400px) {
     font-size: 20px;
   }
 `;
@@ -68,6 +83,12 @@ export const BuyBtn = styled.button`
   font-size: 1.5rem;
   text-transform: uppercase;
   font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: #2561b9;
+  }
 
   @media (max-width: 900px) {
     font-size: 16px;
