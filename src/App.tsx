@@ -1,6 +1,6 @@
 import React from "react";
+import Footer from "./components/footer";
 import Header from "./components/header";
-import { MainNavigate } from "./components/main";
 import MainRoutes from "./routes/MainRoutes";
 
 const App = () => {
@@ -8,7 +8,7 @@ const App = () => {
     <>
       <Header />
       <MainRoutes />
-      <MainNavigate />
+      <Footer />
     </>
   );
 };
